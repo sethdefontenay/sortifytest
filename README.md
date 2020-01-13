@@ -1,5 +1,5 @@
 # sortifytest
-# H3 Contains a docker container which has very basic python API
+#H3 Contains a docker container which has very basic python API
 How to run:
 * ```docker build -t sortifytest:latest .```
 * ```docker run -d -p 5000:5000 sortifytest:latest```
