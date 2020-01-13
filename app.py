@@ -33,7 +33,7 @@ def check(word):
         else:
             return {'word': word, 'isBlacklisted': False }
 
-class HelloWorld(Resource):
+class SimpleSplitter(Resource):
     def get(self):
         input = request.args.get('input', default = '*', type = str)
         output = wordninja.split(input)
@@ -42,7 +42,7 @@ class HelloWorld(Resource):
             results.append(check(word))
         return results
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(SimpleSplitter, '/')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
